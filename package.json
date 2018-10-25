@@ -8,7 +8,7 @@
     "build": "npx soko build:js --jsIn ./app/index.js --jsOut ./build/js/app.js && npx soko build:assets --assetsIn ./assets"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.0",

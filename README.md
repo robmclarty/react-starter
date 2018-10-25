@@ -3,12 +3,19 @@
 An hello-world app demonstrating how easy it can be to setup a new React project
 without all the cruft.
 
-I'm making use of a build/deploy package I built called [soko](https://github.com/robmclarty/soko).
-It transpiles JS using [browserify]() and [babel]() (including object rest/spread
-and async/await plugins) and compresses it using [uglify](). It does other
-things too, so check it out if you want to know more.
+I'm using of a build/deploy package I built called
+[soko](https://github.com/robmclarty/soko). It transpiles JS using
+[browserify](http://browserify.org/) and [babel](https://babeljs.io/)
+(including object rest/spread and async/await plugins), create source maps, and
+compresses it using [uglify]().  It does other things too, so check it out if
+you want to know more. NOTE: `soko` requires Nodejs v8+.
 
-NOTE: `soko` requires Nodejs v8+
+I've also built a component using an alternative structure which avoids using
+`class`, `this`, `new`, `extends`, `bind`, etc. The point is, there is more than
+one way to make a React component. I've created a repo that demonstrates some
+different component construction ideas called
+[es6-react-component](https://github.com/robmclarty/es6-react-component)  if you
+want to learn more.
 
 ## Create a New Project
 
@@ -35,14 +42,19 @@ Ensure you aren't going to copy a gajillion files into your repo.
 
 ## Create App HTML
 
+This is a simple static file that does nothing other than define a container
+for your React app to target.
+
 - create `assets/index.html`
-- define `<div class="app-container"></div>` to be target of react app
+- define `<div id="app-container"></div>` to be target of react app
 
 ## Create React App JS
 
 - create `app/index.js`
-- use `ReactDOM.render()` to create outer wrapper for react app
+- use `ReactDOM.render()` to create outer wrapper for react app and target
+the container in the HTML file above using `document.getElementById('app-container')`
 - import other custom components and include them here at the top of the tree
+however you want to build and organize your app
 
 ## Build
 

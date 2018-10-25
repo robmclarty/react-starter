@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const SuperButton = (props, context) => {
+  // Create a new component that has everything in React.Component.prototype
   const component = { ...React.Component.prototype }
 
   SuperButton.displayName = 'SuperButton'
@@ -13,6 +14,7 @@ const SuperButton = (props, context) => {
     label: 'Default label'
   }
 
+  // Call the function that is passed into the component's props.
   const onClick = e => {
     e.preventDefault()
 
@@ -27,6 +29,8 @@ const SuperButton = (props, context) => {
     </button>
   )
 
+  // Return a new object that is a custom component, overriding prototype
+  // attributes with those defined here.
   return Object.assign(component, {
     props,
     context,
