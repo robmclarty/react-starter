@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "haha, no",
     "build": "npx soko build:js --jsIn ./app/index.js --jsOut ./build/js/app.js && npx soko build:assets --assetsIn ./assets"
   },
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:robmclarty/react-starter.git"
+  },
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.0",

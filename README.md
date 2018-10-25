@@ -1,7 +1,7 @@
 # React Starter
 
-An hello-world app demonstrating how easy it can be to setup a new React project
-without all the cruft.
+An hello-world app demonstrating how easy it can be to setup a new completely
+custom React project without a lot of cruft.
 
 I'm using of a build/deploy package I built called
 [soko](https://github.com/robmclarty/soko). It transpiles JS using
